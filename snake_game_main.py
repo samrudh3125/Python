@@ -40,8 +40,8 @@ while game_is_on:
         scoreboard.game_over()
 
     # Detecting if the snake touches its own body
-    for seg_num in range(2, len(snake.segments)):
-        if snake.head.distance(snake.segments[seg_num]) <= 10:
+    for segment in snake.segments[2:]:
+        if snake.head.distance(segment) <= 10:
             game_is_on = False
             scoreboard.game_over()
 
